@@ -1,0 +1,21 @@
+<h1>Games</h1>
+<%= link_to 'New Game', new_game_path %>
+
+<table class="table">
+  <tr>
+    <th>Date</th>
+    <th>Home</th>
+    <th>Away</th>
+    <th>Description</th>
+    <th></th>
+  </tr>
+  <% @games.each do |game| %>
+    <tr>
+      <td><%= game.date %></td>
+      <td><%= game.home_team %></td>
+      <td><%= game.away_team %></td>
+      <td><%= game.description %></td>
+      <td><%= link_to 'Watch Film', game_path(game) %></td>
+    </tr>
+  <% end %>
+</table>
