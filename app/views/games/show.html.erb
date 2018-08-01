@@ -1,28 +1,21 @@
 <h1><%= @game.title %></h1>
 <p><%= @game.display_date %></p>
 
-<%= link_to 'Record Film Comments', 'javascript:void(0);', id: 'js-record-film', class: 'btn btn-primary' %>
-<div id="js-record-controls" style="display: none; padding-top: 10px;">
-  <%= link_to 'Start', 'javascript:void(0);', id: 'js-start-recording', class: 'btn btn-success' %>
-  <%= link_to 'Stop', 'javascript:void(0);', id: 'js-stop-recording', class: 'btn btn-danger' %>
+<div class="card">
+  <div class="card-header">
+    <div class="float-md-left">
+      <%= link_to 'Start', 'javascript:void(0);', id: 'js-start-recording', class: 'btn btn-success' %>
+      <%= link_to 'Stop', 'javascript:void(0);', id: 'js-stop-recording', class: 'btn btn-danger' %>
+    </div>
+    <div id="js-recording-now" class="float-md-right" style="display: none;">
+      <%= image_tag 'icon-mic-red-bg.png', size: "23x38" %>
+    </div>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Game Log</h5>
+    <div id="js-speech-log" class="card-text"></div>
+  </div>
 </div>
 
 <br>
 <%= link_to 'Games', games_path %>
-
-<script type="text/javascript">
-  $(function(){
-    console.log("Loaded");
-    $('#js-record-film').click(function() {
-      $('#js-record-controls').toggle();
-    })
-
-    $('#js-start-recording').click(function() {
-      console.log("Start Recording");
-    })
-
-    $('#js-stop-recording').click(function() {
-      console.log("Stop Recording");
-    })
-  })
-</script>
