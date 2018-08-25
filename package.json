@@ -1,5 +1,28 @@
 {
-  "name": "basketball_data",
+  "name": "watch_basketball",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "description": "You know... for basketball. Records your voice while you watch tape and parses your comments to fill out statistics for the game. The goal is that this application will be used when watching tape.",
+  "version": "1.0.0",
+  "main": "app-js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoitomt/basketball_data.git"
+  },
+  "author": "Mike Hoitomt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hoitomt/basketball_data/issues"
+  },
+  "homepage": "https://github.com/hoitomt/basketball_data#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "webpack": "^4.17.1"
+  }
 }

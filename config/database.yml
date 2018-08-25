@@ -9,14 +9,14 @@ default: &default
 
 development:
   <<: *default
-  database: basketball_data_development
+  database: watch_basketball_development
 
 test:
   <<: *default
-  database: basketball_data_test
+  database: watch_basketball_test
 
 production:
   <<: *default
-  database: basketball_data_production
-  username: basketball_data
-  password: <%= ENV['BASKETBALL_DATA_DATABASE_PASSWORD'] %>
+  database: watch_basketball_production
+  username: watch_basketball
+  password: <%= ENV['WATCH_BASKETBALL_DATABASE_PASSWORD'] %>
